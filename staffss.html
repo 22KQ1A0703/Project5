@@ -1,0 +1,71 @@
+<html>
+   <head>
+         <title>JavaScript functions </title>
+      </head>     
+      <style>
+        myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+.content {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+}
+
+      </style> 
+      <script>
+ function loginValidation() {
+    var video = document.getElementById("myVideo")
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+   var uname = document.myform.username.value;
+   var password = document.myform.password.value;
+             if(uname==null || uname=="") {
+               alert("Name cant be blank")
+               return false;  
+            } else if (password.length<8){
+               alert("Password Must be 8 letters")
+               return false;
+            }  
+            return true                 
+         }           
+      </script>
+      </head>
+      <body>
+        <center>
+        <video autoplay muted loop id="myVideo">
+            <source src="flower.mp4" type="video/mp4">
+          </video>
+  
+          <div class="content"></div>
+        
+                 <h2>Login Page</h2>  
+<form name="myform" action="LoginSuccess.html" 	onsubmit="return loginValidation(this)">
+ 
+User Name<br><input type="text" name="username"> <br>
+<h1>
+
+</h1>
+Password<br>  <input type="password" name="password"> <br>
+<h1>
+
+</h1>
+         <input type="submit" value="Submit">  
+</center>
+        </div>
+        </form>
+        
+   </body>
+</html>

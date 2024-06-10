@@ -1,0 +1,113 @@
+<html>
+<head>
+    <title>contact us</title>
+    <video autoplay muted loop id="myVideo">
+        
+        <source src="contact.mp4" type="video/mp4">
+
+        your browser not support
+
+   </video>
+    <style>
+        body{
+            background-color:pink;
+            background-size: cover;
+        }
+        h2{
+            text-align:center;
+            color:greenyellow
+        }
+        div{
+            color:blue
+        }
+        #myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: relative;
+  bottom: 0;
+  color:red;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+
+  color:red;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: pink;
+}
+    </style>
+    </head>
+    <script>
+        function validation(){
+            if (isEmpty(document.getElementById('data_2').value.trim())) {
+    alert('Name is required!');
+    return false;
+    }
+    if (isEmpty(document.getElementById('data_3').value.trim())) {
+    alert('PhoneNumber is required!');
+    return false;
+    }
+    if (isEmpty(document.getElementById('data_4').value.trim())) {
+    alert('Email is required!');
+    return false;
+    }
+    if (isEmpty(document.getElementById('data_5').value.trim())) {
+    alert('Message is required!');
+    return false;
+    }
+  
+    function isEmpty(str) { return (str.length === 0 || !str.trim()); }
+        }
+    </script>
+    <body>
+        <form  method="post" action="success.html" onSubmit="return validation();">
+       
+        <div class="content">
+        <center>
+        <h2>CONTACT US</h2>
+        <div style="padding-bottom: 18px;">FullName:
+            <input type="text" id="data_2" name="data_2" style="max-width : 250px;"/>
+            </div>
+       
+        <h2>
+        </h2>
+<div style="padding-bottom: 18px;">PhoneNumber:
+    <input type="text" id="data_3" name="data_3" style="max-width : 250px;"/>
+    </div>
+<h2>
+
+</h2>
+<div style="padding-bottom: 18px;">Email:
+    <input type="text" id="data_4" name="data_4" style="max-width : 250px;"/>
+    </div>
+
+<div style="padding-bottom: 18px;">Message:
+
+        <br>   
+        <h1>
+
+        </h1>
+<textarea name="mytest" cols:"35" rows:"45" color:"pink">
+Problems...
+</textarea> <br>
+<h1>
+
+</h1>
+<input type="submit">
+</center>
+</body>
+</html>
